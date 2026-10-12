@@ -1,0 +1,47 @@
+{
+  "dataset": "matminer: expt_gap",
+  "target": "experimental band gap (eV, as represented in source dataset)",
+  "n_usable_samples": 6353,
+  "n_features": 132,
+  "n_unique_reduced_formulae": 4920,
+  "seed": 42,
+  "random_split": {
+    "train_size": 5082,
+    "test_size": 1271,
+    "metrics": {
+      "baseline": {
+        "MAE": 1.220738308731299,
+        "RMSE": 1.5715710329042731,
+        "R2": -0.0003876858508611303
+      },
+      "random_forest": {
+        "MAE": 0.35681577183977614,
+        "RMSE": 0.6612561773965607,
+        "R2": 0.8228913425505152
+      }
+    }
+  },
+  "formula_grouped_split": {
+    "train_size": 5004,
+    "test_size": 1349,
+    "metrics": {
+      "baseline": {
+        "MAE": 1.1651330292326556,
+        "RMSE": 1.4965364878362597,
+        "R2": -0.0006440215264342797
+      },
+      "random_forest": {
+        "MAE": 0.4458336356300413,
+        "RMSE": 0.805938417729951,
+        "R2": 0.7097924535076494
+      }
+    }
+  },
+  "limitations": [
+    "Composition-only features omit crystal structure and measurement conditions.",
+    "A grouped split by reduced formula is more challenging but does not prove broad chemical novelty.",
+    "Experimental band gaps may be collected using different methods and sources.",
+    "Feature importance is model-specific and not causal evidence.",
+    "Predictions are not experimental measurements or new materials discoveries."
+  ]
+}
